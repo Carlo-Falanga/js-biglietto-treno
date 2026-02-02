@@ -25,20 +25,28 @@ const numberAge = Number(prompt("Inserisci l'eta' del passeggero"));
 // - prezzo in base ai km
 const priceKm = 0.21;
 
-// console.log(numberKilometers, numberAge);
+// console.log(numberKilometers, numberAge, priceKm, basePrice, priceMessage);
 
-/* - calcolo per il costo senza sconto ie. 100(numero km) * 0.21(prezzo al km) */
+// calcolo per il costo senza sconto ie. 100(numero km) * 0.21(prezzo al km)
 const basePrice = numberKilometers * priceKm;
+
+// messaggio per l'alert
+const priceMessage = "Il costo del biglietto e' di €";
 
 /* Elaborazione richiesta */
 if (numberAge < 18) {
   const minorDiscount = basePrice * 0.2;
   const minorDiscountTotal = basePrice - minorDiscount;
+  alert(`${priceMessage}  ${minorDiscountTotal.toFixed(2)}`);
   console.log(minorDiscountTotal.toFixed(2));
+
 } else if (numberAge > 65) {
   const overDiscount = basePrice * 0.4;
   const overDiscountTotal = basePrice - overDiscount;
+  alert(`${priceMessage} ${overDiscountTotal.toFixed(2)}`);
   console.log(overDiscountTotal.toFixed(2));
+
 } else {
+  alert(`${priceMessage} ${basePrice.toFixed(2)}`);
   console.log(basePrice.toFixed(2));
 }
