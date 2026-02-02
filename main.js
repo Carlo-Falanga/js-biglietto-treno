@@ -14,3 +14,14 @@ per controllare che la vostra logica sui prezzi funzioni correttamente, provate 
 100km, 10 anni => prezzo corretto:  €16.80
 100km, 70 anni => prezzo corretto: €12.60
 */
+
+
+
+// Data colletion
+// - chiedere all'utente il numero di chilometri
+const numberKilometers = prompt('Inserisci il numero di chilometri da percorrere')
+// - chiedere all'utente l'eta' del passeggero
+const numberAge = (prompt("Inserisci l'eta' del passeggero"))
+
+console.log(numberKilometers, numberAge);
+
