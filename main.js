@@ -28,3 +28,12 @@ const priceKm = 0.21;
 const priceCalc = numberKilometers * priceKm;
 
 console.log(numberKilometers, numberAge, priceCalc);
+
+// calcolo del totale dello sconto 
+const minorDiscount = priceCalc * 0.20;
+// sottrazione del prezzo pieno con lo sconto per ottenere il prezzo finale scontato
+const minorDiscountPrice = priceCalc - minorDiscount;
+
+if (numberAge < 18){
+    console.log(minorDiscountPrice);
+}
