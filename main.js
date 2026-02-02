@@ -30,20 +30,22 @@ const priceKm = 0.21;
 // calcolo per il costo senza sconto ie. 100(numero km) * 0.21(prezzo al km)
 const basePrice = numberKilometers * priceKm;
 
-// messaggio per l'alert
+// messaggi per l'alert
 const priceMessage = "Il costo del biglietto e' di €";
+const minorPriceMessage = "Il costo del biglietto scontato del 20% e' di"
+const overPriceMessage = "Il costo del biglietto scontato del 20% e' di"
 
 /* Elaborazione richiesta */
 if (numberAge < 18) {
   const minorDiscount = basePrice * 0.2;
   const minorDiscountTotal = basePrice - minorDiscount;
-  alert(`${priceMessage}  ${minorDiscountTotal.toFixed(2)}`);
+  alert(`${minorPriceMessage}  ${minorDiscountTotal.toFixed(2)}`);
   console.log(minorDiscountTotal.toFixed(2));
 
 } else if (numberAge > 65) {
   const overDiscount = basePrice * 0.4;
   const overDiscountTotal = basePrice - overDiscount;
-  alert(`${priceMessage} ${overDiscountTotal.toFixed(2)}`);
+  alert(`${overPriceMessage} ${overDiscountTotal.toFixed(2)}`);
   console.log(overDiscountTotal.toFixed(2));
 
 } else {
