@@ -15,13 +15,16 @@ per controllare che la vostra logica sui prezzi funzioni correttamente, provate 
 100km, 70 anni => prezzo corretto: €12.60
 */
 
-
-
 // Data colletion
 // - chiedere all'utente il numero di chilometri
-const numberKilometers = prompt('Inserisci il numero di chilometri da percorrere')
+const numberKilometers = Number(
+  prompt("Inserisci il numero di chilometri da percorrere"),
+);
 // - chiedere all'utente l'eta' del passeggero
-const numberAge = (prompt("Inserisci l'eta' del passeggero"))
+const numberAge = Number(prompt("Inserisci l'eta' del passeggero"));
+// - prezzo in base ai km
+const priceKm = 0.21;
+// - calcolo per il costo finale ie. 22(numero km) * 0.21(prezzo al km)
+const priceCalc = numberKilometers * priceKm;
 
-console.log(numberKilometers, numberAge);
-
+console.log(numberKilometers, numberAge, priceCalc);
