@@ -15,7 +15,7 @@ per controllare che la vostra logica sui prezzi funzioni correttamente, provate 
 100km, 70 anni => prezzo corretto: €12.60
 */
 
-// Data colletion
+/* Data colletion */
 // - chiedere all'utente il numero di chilometri
 const numberKilometers = Number(
   prompt("Inserisci il numero di chilometri da percorrere"),
@@ -24,16 +24,21 @@ const numberKilometers = Number(
 const numberAge = Number(prompt("Inserisci l'eta' del passeggero"));
 // - prezzo in base ai km
 const priceKm = 0.21;
-// - calcolo per il costo finale ie. 22(numero km) * 0.21(prezzo al km)
-const priceCalc = numberKilometers * priceKm;
 
-console.log(numberKilometers, numberAge, priceCalc);
+// console.log(numberKilometers, numberAge);
 
-// calcolo del totale dello sconto 
-const minorDiscount = priceCalc * 0.20;
-// sottrazione del prezzo pieno con lo sconto per ottenere il prezzo finale scontato
-const minorDiscountPrice = priceCalc - minorDiscount;
+/* - calcolo per il costo senza sconto ie. 100(numero km) * 0.21(prezzo al km) */
+const basePrice = numberKilometers * priceKm;
 
-if (numberAge < 18){
-    console.log(minorDiscountPrice);
+/* Elaborazione richiesta */
+if (numberAge < 18) {
+  const minorDiscount = basePrice * 0.2;
+  const minorDiscountTotal = basePrice - minorDiscount;
+  console.log(minorDiscountTotal.toFixed(2));
+} else if (numberAge > 65) {
+  const overDiscount = basePrice * 0.4;
+  const overDiscountTotal = basePrice - overDiscount;
+  console.log(overDiscountTotal.toFixed(2));
+} else {
+  console.log(basePrice.toFixed(2));
 }
