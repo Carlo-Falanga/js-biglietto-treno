@@ -32,8 +32,8 @@ const basePrice = numberKilometers * priceKm;
 
 // messaggi per l'alert
 const priceMessage = "Il costo del biglietto e' di €";
-const minorPriceMessage = "Il costo del biglietto scontato del 20% e' di"
-const overPriceMessage = "Il costo del biglietto scontato del 20% e' di"
+const minorPriceMessage = "Il costo del biglietto scontato del 20% e' di €"
+const overPriceMessage = "Il costo del biglietto scontato del 40% e' di €"
 
 /* Elaborazione richiesta */
 if (numberAge < 18) {
